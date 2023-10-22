@@ -1,4 +1,4 @@
-package com.leet_code.sliding_window;
+package com.leet_code.sliding_window.maximum_average_subarray;
 
 public class MaximumAverageSubarray {
 
