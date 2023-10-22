@@ -4,7 +4,7 @@ public class MaximumAverageSubarray {
 
     public double findMaxAverage(int[] nums, int k) {
         if (nums.length == 1 && k != 0) {
-            return nums[0] / k;
+            return (double) nums[0] / k;
         }
 
         double sum = 0.0;
