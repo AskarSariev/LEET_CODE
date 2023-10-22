@@ -3,23 +3,20 @@ package com.leet_code.sliding_window;
 public class MaximumAverageSubarray {
 
     public double findMaxAverage(int[] nums, int k) {
-        if (nums.length == 1 && k != 0) {
-            return (double) nums[0] / k;
-        }
-
+        // Считаем сумму первого окна
         double sum = 0.0;
 
         for (int i = 0; i < k; i++) {
             sum += nums[i];
         }
 
-        double current = sum;
+        double result = sum; // Храним максимальную сумму
 
-        for (int i = 1, right = k; right < nums.length; right++, i++) {
-            current = current - nums[i - 1] + nums[right];
-            sum = Math.max(current, sum);
+        for (int i = k; i < nums.length; i++) {
+            sum += nums[i] - nums[i - k]; // Добавляем вошедший/убираем ушедший
+            result = Math.max(result, sum);
         }
 
-        return sum / k;
+        return result / k;
     }
 }
