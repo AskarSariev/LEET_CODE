@@ -1,6 +1,6 @@
 package com.leet_code.sliding_window.maximum_average_subarray;
 
-public class MaximumAverageSubarray {
+public class Solution {
 
     public double findMaxAverage(int[] nums, int k) {
         // Считаем сумму первого окна
